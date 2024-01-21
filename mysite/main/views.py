@@ -10,6 +10,7 @@ def view(request):
 
 def view_zapis(request, id):
     return render(request, 'main/view_detail.html', {'zapis':get_object_or_404(Zapis, id=id)})
+
 def create(request):
     if request.method == "POST":
         form = Create(request.POST)
